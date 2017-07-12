@@ -79,7 +79,6 @@ var GameTouchLayer = cc.Layer.extend({
         }
 
 
-
         //获取点击到的精灵
         if(touch.getLocation().x>29&&touch.getLocation().x<617&&touch.getLocation().y>224&&touch.getLocation().y<822) {
             target.i = Math.round((touch.getLocation().y - 250) / 78);
@@ -305,7 +304,8 @@ var GameTouchLayer = cc.Layer.extend({
         this.barbg.removeFromParent();
         this.mybar.removeFromParent();
         this.spbar();
-        this.schedule(this.godown,0.05);
+        //哈哈哈哈这里就是万恶的操纵【倒计时】的地方。。
+        this.schedule(this.godown,0.1);
     },
     Back:function(){
 
